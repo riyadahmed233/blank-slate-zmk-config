@@ -74,35 +74,36 @@
  &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I        &kp O      &kp P         &kp BACKSPACE
  &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K        &kp L      &kp SEMI      &kp SQT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA    &kp DOT    &kp FSLH      &kp RET
- &kp LCTRL  &kp LGUI   &kp LALT   &mo SYM_L   &mo NAV_L            &kp SPACE                 &mo NUM_L      &kp NUBS     &kp MINUS  &kp EQUAL     &kp NUHS
+ &kp LCTRL  &kp LGUI   &kp LALT   &mo NAV_L   &mo NAV_L            &kp SPACE                 &mo NUM_L      &kp NUBS     &kp MINUS  &kp EQUAL     &kp NUHS
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&kp F1  &kp F2      &kp F3             &kp F4           &kp F5    &kp F6      &kp F7            &kp F8           &kp F9          &kp F10          &kp F11     &kp F12
-&trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans    &trans      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &trans      &trans
-&trans  &trans      &trans             &trans           &trans    &trans      &trans            &trans           &trans          &trans           &trans      &trans 
-&trans  &trans      &trans             &trans           &trans          &trans                  &trans           &trans          &trans           &trans      &trans
+&trans    &kp N1      &kp N2        &kp N3          &kp N4    &kp N5    &kp N6      &kp N7      &kp N8    &kp N9       &kp N0      &trans
+&trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &trans    &trans    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT    &kp LBKT    &kp RBKT
+&trans    &trans      &trans        &trans          &trans    &trans    &trans      &none       &trans    &trans       &trans      &trans
+&trans    &trans      &trans        &trans          &trans    &trans           &trans           &trans    &trans       &trans      &trans
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&trans    &kp N1    &kp N2    &kp N3      &kp N4   &kp N5     &kp N6       &kp N7        &kp N8        &kp N9     &kp N0      &trans
-&trans    &kp F1    &kp F2    &kp F3      &kp F4   &kp F5     &kp F6       &none         &none         &kp LBKT   &kp RBKT    &trans
-&trans  &kp F7    &kp F8    &kp F9      &kp F10  &kp F11    &kp F12        &none         &trans        &trans     &trans      &trans
-&trans  &trans       &trans     &trans      &trans         &trans           &trans       &trans        &trans     &trans      &trans
+&trans    &kp N1      &kp N2        &kp N3          &kp N4    &kp N5    &kp N6      &kp N7      &kp N8    &kp N9       &kp N0      &trans
+&trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &trans    &trans    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT    &kp LBKT    &kp RBKT
+&trans    &trans      &trans        &trans          &trans    &trans    &trans      &none       &trans    &trans       &trans      &trans
+&trans    &trans      &trans        &trans          &trans    &trans           &trans           &trans    &trans       &trans      &trans
             >;
         };
 
         sym_layer {
             label = "Sym";
             bindings = <
+
+&kp F1      &kp F2        &kp F3         &kp F4       &kp F5        &kp F6        &kp F7  &kp F8  &kp F9      &kp F10     &kp F11 &kp F12
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans      &trans      &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans  &trans
 &trans &trans        &trans     &trans        &trans                &trans             &trans     &bt BT_PRV  &bt BT_NXT &trans &trans
             >;
