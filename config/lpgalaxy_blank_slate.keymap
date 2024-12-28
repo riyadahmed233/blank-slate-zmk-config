@@ -24,6 +24,10 @@
 
 #define BT(n) BT_SEL n
 
+&mt {
+    quick-tap-ms = 150
+};
+
 / {
     chosen {
        zmk,physical-layout =
