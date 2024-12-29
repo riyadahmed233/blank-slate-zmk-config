@@ -20,9 +20,11 @@
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { tapping-term-ms = <400>;
+&lt { flavor = "tap-preferred";
+	tapping-term-ms = <400>;
 	quick_tap_ms = <400>; };
-&mt { tapping-term-ms = <400>;
+&mt { flavor = "tap-preferred";
+	tapping-term-ms = <400>;
 	quick-tap-ms = <400>; };
 
 #define BT(n) BT_SEL n
