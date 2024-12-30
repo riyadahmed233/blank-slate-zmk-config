@@ -12,8 +12,8 @@
 #define QWERTY_BASE 1
 
 //#define TBLE_ORTHO   1
- #define TBLE_MIT     1
-// #define TBLE_DUAL_2U 1
+// #define TBLE_MIT     1
+#define TBLE_DUAL_2U 1
 
 #define NAV_L 1
 #define NUM_L 2
@@ -21,11 +21,11 @@
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { flavor = "tap-preferred";
-	tapping-term-ms = <400>;
-	quick_tap_ms = <400>; };
+	tapping-term-ms = <200>;
+	quick_tap_ms = <200>; };
 &mt { flavor = "tap-preferred";
-	tapping-term-ms = <400>;
-	quick-tap-ms = <400>; };
+	tapping-term-ms = <200>;
+	quick-tap-ms = <200>; };
 
 #define BT(n) BT_SEL n
 
@@ -78,30 +78,30 @@
         base_layer {
             label = "Base";
             bindings = <
- &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I        &kp O      &kp P         &kp BACKSPACE
- &kp TAB    &mt LALT A      &mt LCTRL S      &mt LSHIFT D       &mt LGUI F          &kp G          &kp H            &mt RGUI J          &mt RSHIFT K        &mt RCTRL L      &mt RALT SEMI      &kp SQT
- &none  &kp Z      &kp X      &kp C       &kp V          &lt 2 B          &lt 2 N            &kp M          &kp COMMA    &kp DOT    &kp FSLH      &kp RET
- &none  &none   &none   &mo NAV_L   &mo NAV_L            &kp SPACE                 &mo NUM_L      &kp NUBS     &kp MINUS  &kp EQUAL     &kp NUHS
+ &mt ESC Q  &kp W       &kp E           &kp R           &kp T       &none           &none           &kp Y           &kp U       &kp I           &kp O           &kp P
+ &mt LALT A &mt LCTRL S &mt LSHIFT D    &mt LGUI F      &kp G       &none           &none           &kp H           &mt RGUI J  &mt RSHIFT K    &mt RCTRL L     &mt RALT SEMI
+ &kp Z      &kp X       &kp C           &kp V           &kp B       &kp MINUS       &kp EQUAL       &kp N           &kp M       &kp COMMA       &kp DOT         &kp RET
+ &none      &none       &none           &kp SQT             &lt 2 SPACE                 &lt 3 BACKSPACE             &kp FLSH    &none           &none           &none
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&trans    &kp N1      &kp N2        &kp N3          &kp N4    &kp N5    &kp N6      &kp N7      &kp N8    &kp N9       &kp N0      &trans
-&trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &trans    &trans    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT    &kp LBKT    &kp RBKT
-&trans    &trans      &trans        &trans          &trans    &trans    &trans      &none       &trans    &trans       &trans      &trans
-&trans    &trans      &trans        &trans          &trans    &trans           &trans           &trans    &trans       &trans      &trans
+&kp N1      &kp N2      &kp N3          &kp N4          &kp N5    &none     &none       &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+&kp TAB     &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP    &trans    &none     &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans 
+&trans      &trans      &trans          &trans          &trans    &kp LBKT  &kp RBKT    &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans          &kp NUHS              &trans                &trans        &kp NUBS    &trans      &trans      &trans
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&trans    &kp N1      &kp N2        &kp N3          &kp N4    &kp N5    &kp N6      &kp N7      &kp N8    &kp N9       &kp N0      &trans
-&trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &trans    &trans    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT    &kp LBKT    &kp RBKT
-&trans    &trans      &trans        &trans          &trans    &trans    &trans      &none       &trans    &trans       &trans      &trans
-&trans    &trans      &trans        &trans          &trans    &trans           &trans           &trans    &trans       &trans      &trans
+&kp N1      &kp N2      &kp N3          &kp N4          &kp N5    &none     &none       &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+&kp TAB     &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP    &trans    &none     &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans 
+&trans      &trans      &trans          &trans          &trans    &kp LBKT  &kp RBKT    &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans          &kp NUHS              &trans                &trans        &kp NUBS    &trans      &trans      &trans
             >;
         };
 
@@ -109,10 +109,10 @@
             label = "Sym";
             bindings = <
 
-&kp F1      &kp F2        &kp F3         &kp F4       &kp F5        &kp F6        &kp F7  &kp F8  &kp F9      &kp F10     &kp F11 &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans      &trans      &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans  &trans
-&trans &trans        &trans     &trans        &trans                &trans             &trans     &bt BT_PRV  &bt BT_NXT &trans &trans
+&kp F1      &kp F2        &kp F3         &kp F4       &kp F5        &none           &none       &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none           &none       &trans      &trans      &trans      &trans      &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans      &trans      &trans      &trans
+&trans      &trans        &trans        &trans                &trans                    &trans              &trans      &bt BT_PRV  &bt BT_NXT  &trans
             >;
         };
 
